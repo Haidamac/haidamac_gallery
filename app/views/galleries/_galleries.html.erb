@@ -1,0 +1,8 @@
+<% @galleries.each do |gallery| %>
+  <%= link_to gallery, class: 'card p-0 mt-3 mx-auto shadow-sm' do %>
+    <%= image_tag image_url(gallery.image), class: 'card-img-top', alt: gallery.name %>
+    <div class='card-body px'>
+      <h5 class='card-title text-center'><%= gallery.name %></h5>
+    </div>
+  <% end %>
+<% end %>

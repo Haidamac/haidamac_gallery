@@ -27,6 +27,9 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# Official AWS Ruby gem for Amazon Simple Storage Service (Amazon S3). This gem is part of the AWS SDK for Ruby
+gem 'aws-sdk-s3', require: false
+
 # Use Redis adapter to run Action Cable in production
 gem "redis", "~> 4.0"
 

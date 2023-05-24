@@ -1,5 +1,5 @@
 class PhotosController < ApplicationController
-  before_action :set_gallery, only: :show
+  before_action :set_gallery
   before_action :set_photo, only: :show
 
   def index
@@ -14,7 +14,7 @@ class PhotosController < ApplicationController
   private
 
   def set_gallery
-    @gallery = Gallery.find(params[:id])
+    @gallery = Gallery.find(params[:gallery_id])
   end
 
   def set_photo

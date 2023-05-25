@@ -1,6 +1,6 @@
 <% @photos.each do |photo| %>
   <%= link_to photo, class: 'card p-0 mt-3 mx-auto shadow-sm' do %>
-    <%= image_tag photo.image.variant(:main), class: 'card-img-top', alt: photo.title %>
+    <%= image_tag photo.image.variant(:thumb), class: 'card-img-top', alt: photo.title %>
     <div class='card-body px'>
       <h5 class='card-title text-center'><%= photo.title %></h5>
     </div>

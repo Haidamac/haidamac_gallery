@@ -8,6 +8,7 @@ class GalleriesController < ApplicationController
   def show
     @photos = @gallery.photos
     @breadcrumb = @gallery
+    redirect_to photos_path(gallery_id: @gallery.id)
   end
 
   private

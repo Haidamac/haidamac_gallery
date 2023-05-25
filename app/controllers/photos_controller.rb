@@ -1,5 +1,5 @@
 class PhotosController < ApplicationController
-  before_action :set_gallery
+  before_action :set_gallery, only: :index
   before_action :set_photo, only: :show
 
   def index
@@ -7,7 +7,6 @@ class PhotosController < ApplicationController
   end
 
   def show
-    @breadcrumb = @photo.gallery
     @photo
   end
 

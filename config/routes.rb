@@ -3,9 +3,8 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
 
-  resources :galleries do
-    resources :photos
-  end
-
+  resources :galleries 
+  resources :photos
+  
   root to: "galleries#index"
 end

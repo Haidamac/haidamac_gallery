@@ -1,1 +1,10 @@
 @import "bootstrap";
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+
+.center-card {
+    display: flex;  
+    max-width: 100%;
+    width: 1200px;
+    margin: 0 auto;
+  }

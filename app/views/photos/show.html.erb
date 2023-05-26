@@ -7,12 +7,18 @@
     </ol>
   </nav>
 </div>
-<div class='card mb-3' style='max-width: 1200px;'>
-  <div class="card text-bg-dark">
-    <%= image_tag @photo.image.variant(:main), class: 'img-fluid rounded-start', alt: @photo.title %>
-    <div class="card-body">
-      <h5 class="card-title"><%= @photo.title %></h5>
-      <p class='card-text'><small><%= @photo.description %></small></p>
+<div class="row justify-content-center align-items-center">
+  <div class="col-md-12">
+    <div class="card center-card">
+      <div class="card text-bg-dark">
+        <%= image_tag @photo.image.variant(:main), class: 'rounded card-img-top', alt: @photo.title do %>
+          <%= tag(:img, { width: '100%' }) %>
+        <% end %>
+        <div class="card-body">
+          <h5 class="card-title"><%= @photo.title %></h5>
+          <p class='card-text'><small><%= @photo.description %></small></p>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -1,8 +1,12 @@
 <% @galleries.each do |gallery| %>
-  <%= link_to gallery, class: 'card p-0 mt-3 mx-auto shadow-sm' do %>
-    <%= image_tag gallery.photos.first.image.variant(:thumb), class: 'card-img-top', alt: gallery.name %>
-    <div class='card-body px'>
-      <h5 class='card-title text-center'><%= gallery.name %></h5>
+  <div class="col-auto mb-2">
+    <div class="card thumb-card">
+      <%= link_to gallery, class: 'card p-0 mt-3 mx-auto shadow-sm' do %>
+        <%= image_tag gallery.photos.first.image.variant(:thumb), class: 'card-img-top', alt: gallery.name %>
+        <div class='card-body px'>
+          <h5 class='card-title text-center'><%= gallery.name %></h5>
+        </div>
+      <% end %>
     </div>
-  <% end %>
+  </div>
 <% end %>

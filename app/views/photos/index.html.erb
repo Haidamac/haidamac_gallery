@@ -5,10 +5,9 @@
       <div class='row'>
         <h3 class='text-center'><%= @gallery.name %></h3>
       </div>
-      <div class='row'>
-        <div class="col-sm-2 mb-3 mb-sm-0">
-         <%= render partial: 'photos' %>
-        </div>
+      <%# <div class='row row-cols-1 row-cols-md-2 row-cols-lg-3'> %>
+      <div class='row row-cols-auto'>
+        <%= render partial: 'photos' %>
       </div>
     </div>
   </div>

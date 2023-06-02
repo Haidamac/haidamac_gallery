@@ -1,11 +1,11 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.17.3"
 
-set :application, "my_app_name"
+set :application, "haidamac_gallery"
 set :repo_url, "git@github.com:Haidamac/haidamac_gallery.git"
 
 # Default branch is :master
-# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 set :user, 'deployer'
 set :puma_user, fetch(:user)
@@ -24,13 +24,15 @@ set :rvm_ruby_version, '3.2.2'
 # Default value for :pty is false
 set :pty, true
 
-set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/master.key', 'config/puma.rb', 'config/application.yml')
+set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/master.key', 'config/puma.rb',
+                                                 'config/credentials.yml')
 set :linked_dirs,  fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads', 'public/images',
                                                 'storage')
 
 set :config_example_suffix, '.example'
-set :config_files, %w[config/database.yml config/application.yml]
+set :config_files, %w[config/database.yml config/credentials.yml]
 set :nginx_use_ssl, false
+set :env_file, '.env.production.local'
 
 namespace :deploy do
     before 'check:linked_files', 'set:master_key'

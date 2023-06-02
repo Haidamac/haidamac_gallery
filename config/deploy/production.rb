@@ -1,3 +1,14 @@
+server '46.101.126.91', user: "#{fetch(:user)}", roles: %w[app db web], primary: true
+
+set :application, 'haidamacgallery'
+set :deploy_to, "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
+
+set :environment, 'production'
+set :rails_env,   'production'
+
+set :nginx_server_name, '46.101.126.91'
+set :puma_conf, "#{shared_path}/config/puma.rb"
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.

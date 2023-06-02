@@ -39,3 +39,5 @@
 # Ignore idea
 .idea
 
+
+/config/credentials/production.key

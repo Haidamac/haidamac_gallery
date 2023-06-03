@@ -60,6 +60,9 @@ gem "image_processing", "~> 1.2"
 # The most popular HTML, CSS, and JavaScript framework for developing responsive
 gem 'bootstrap', '~> 5.2', '>= 5.2.3'
 
+# provides a minimal two way bridge between the V8 JavaScript engine and Ruby
+gem 'mini_racer', '~> 0.8.0'
+
 gem 'net-smtp', require: false
 gem 'net-imap', require: false
 gem 'net-pop', require: false

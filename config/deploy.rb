@@ -30,7 +30,7 @@ set :linked_dirs,  fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 
                                                 'storage')
 
 set :config_example_suffix, '.example'
-set :config_files, %w[config/database.yml config/credentials.yml]
+set :config_files, %w[config/database.yml config/credentials.yml config/credentials/production.key]
 set :nginx_use_ssl, false
 set :env_file, '.env.production.local'
 

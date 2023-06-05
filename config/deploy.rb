@@ -24,7 +24,8 @@ set :rvm_ruby_version, '3.2.2'
 # Default value for :pty is false
 set :pty, true
 
-set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/master.key', 'config/puma.rb', 'config/credentials.yml')
+set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/master.key', 'config/puma.rb', 
+                                                 'config/credentials.yml', 'config/credentials/production.key')
 set :linked_dirs,  fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads', 'public/images',
                                                 'storage')
 

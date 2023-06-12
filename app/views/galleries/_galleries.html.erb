@@ -4,6 +4,8 @@
       <%= link_to gallery, class: 'card p-0 mt-3 mx-auto shadow-sm' do %>
         <% if gallery.photos.first %>
           <%= image_tag gallery.photos.first.image.variant(:thumb), class: 'card-img-top', alt: gallery.name %>
+        <% else %>
+          <%= image_tag("no_image.png", class: 'card-img-top', alt: 'No image') %>
         <% end %>
         <div class='card-body px'>
           <h5 class='card-title text-center'><%= gallery.name %></h5>

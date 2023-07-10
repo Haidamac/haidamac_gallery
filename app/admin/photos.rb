@@ -19,7 +19,25 @@ ActiveAdmin.register Photo do
     column :gallery
     actions
   end
-  
+
+  show do
+    attributes_table do
+      row :image do |photo|
+        if photo.image.attached?
+          image_tag photo.image.variant(:main)
+        else
+          content_tag(:span, "No Image Attached")
+        end
+      end
+      row :title
+      row :description
+      row :gallery
+      row :created_at
+      row :updated_at
+    end
+    active_admin_comments
+  end
+
   form do |f|
     f.inputs do
       f.input :gallery

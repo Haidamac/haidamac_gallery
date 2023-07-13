@@ -39,6 +39,13 @@ ActiveAdmin.register Photo do
   end
 
   form do |f|
+    div class: 'current-image' do
+      if f.object.image.present?
+        image_tag(f.object.image.variant(:thumb))
+      else
+        content_tag(:span, 'No image yet')
+      end
+    end
     f.inputs do
       f.input :gallery
       f.input :title
